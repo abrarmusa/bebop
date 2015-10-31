@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "ffmpeg": "0.0.4",
+    "jquery": "^2.1.4",
+    "request": "^2.65.0",
     "ytdl-core": "^0.7.5"
   }
 }
