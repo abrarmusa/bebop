@@ -6,5 +6,9 @@
   "author": "Connor Sears",
   "scripts": {
     "start": "electron ."
+  },
+  "devDependencies": {
+    "ffmpeg": "0.0.4",
+    "ytdl-core": "^0.7.5"
   }
 }
