@@ -1,30 +1,16 @@
+"use strict"
+
 var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
-var fs = require('fs');
-var ytdl=require('ytdl-core');
-// var ffmpeg = require('fluent-ffmpeg');
 // Report crashes to our server.
 require('crash-reporter').start();
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 var mainWindow = null;
 
 // get link and set destination
-var url = 'https://www.youtube.com/watch?v=iX-QaNzd-0Y';
-var mp4 = './video.mp4';
-var mp3 = './audio.mp3';
-
-// proc = new ffmpeg({source:mp4});
-// proc.setFmpegPath('/Applications/ffmeg');
-// proc.saveToFile(mp3, (stdout, stderr)->
-//                       return console.log stderr if err?
-//                       return console.log 'done'
-//                       );
-
-ytdl(url).pipe(fs.createWriteStream(mp4));
-
-
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
@@ -39,7 +25,11 @@ app.on('window-all-closed', function() {
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: 800
+    , height: 600
+    , frame: false
+    , icon: __dirname + '/assets/logos/barlogo.png'
+  });
 
   // and load the index.html of the app.
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
