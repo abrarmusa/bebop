@@ -10,75 +10,51 @@
     window.$ = window.jQuery = require('jquery');
   </script>
   <!-- Requiring Bootstrap -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./node_modules/bootflat/css/bootstrap.min.css">
   <link rel="stylesheet" href="./node_modules/bootflat/bootflat/css/bootflat.min.css">
-
+  <link rel="stylesheet" href="./node_modules/bootstrap-slider/css/bootstrap-slider.css">
+  <link rel="stylesheet" href="css/non-responsive.css">
+  <link rel="stylesheet" href="css/main.css">
   <script src="js/audioLoader.js" charset="utf-8"></script>
   <script src="js/audioplayer.min.js" charset="utf-8"></script>
+  <script src="./node_modules/bootflat/bootflat/js/icheck.min.js"></script>
+  <script src="./node_modules/bootflat/bootflat/js/jquery.fs.selecter.min.js"></script>
+  <script src="./node_modules/bootflat/bootflat/js/jquery.fs.stepper.min.js"></script>
+  <script src="./node_modules/bootstrap-slider/js/bootstrap-slider.js"></script>
   <script>
-  var song = require("./js/audioLoader");
-  song = new Song();
-  song = song.getAudio();
-  $( function() { $( 'audio' ).audioPlayer(); } );
+    var song = require("./js/audioLoader");
+    song = new Song();
+    song = song.getAudio();
+    $( function() { $( 'audio' ).audioPlayer(); } );
+    // With JQuery
   </script>
 
 </head>
-  <body style="-webkit-app-region: drag">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+<body style="-webkit-app-region: drag">
+  <nav class="navbar navbar-inverse">
+    <div class="non-responsive">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="row">
+        <div class="col-md-3 button-div">
+          <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-backward"></i></button>
+          <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-play"></i></button>
+          <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-forward"></i></button>
+          <button type="button" class="btn btn-default btn-vol"><i class="glyphicon glyphicon-volume-up"></i></button>
+          <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" class="vol-slider" />
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-    <audio controls>
-      <source src="music/audio.mp3">
+        <div class="col-md-4 music-div">
+          <h4>Fxxk You</h4>
+          <p>Gain - Hello World</p>
+          <input id="song-slider" data-slider-id='song-sliderSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" class="song-slider" />
+        </div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <audio controls>
+    <source src="music/audio.mp3">
     </audio>
 
 
@@ -86,9 +62,10 @@
     <!-- Bootstrap -->
 
     <!-- Bootflat's JS files.-->
-    <script src="https://bootflat.github.io/bootflat/js/icheck.min.js"></script>
-    <script src="https://bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js"></script>
-    <script src="https://bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js"></script>
+<script type="text/javascript">
+      $('#ex1').slider();
+      $('#song-slider').slider();
+</script>
   </body>
 
   <!-- Javascript -->

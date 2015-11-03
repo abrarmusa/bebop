@@ -1,0 +1,126 @@
+/*Remove rounded Borders*/
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Styles*/
+
+.navbar-inverse {
+    background: -webkit-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%); 
+    background:    -moz-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
+    background:     -ms-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
+    background:      -o-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
+    background:         linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
+    border: none;
+}
+
+/* Div to hold music controls */
+.button-div {
+  margin: 10px;
+}
+/* Div to hold music details*/
+.music-div {
+    padding-left: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 25px;
+    border-left: 1px white solid;
+    border-right: 1px white solid;
+}
+
+.music-div > h4, p {
+  color:white;
+}
+
+
+
+
+
+/* Circular button hover */
+.btn-default.btn-circle.active, .btn-default.btn-circle:active, .btn-default.btn-circle:focus, .btn-default.btn-circle:hover {
+    background: none !important;
+    border-color: red !important;
+    color: white !important;
+    transition: border-color 0.7s ease; 
+}
+
+/* Button hover styles*/
+.btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover {
+    background: none !important;
+    color: red !important;
+    transition: color 0.7s ease; 
+}
+
+/* Circular Play button*/
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 0;
+  border-radius: 15px !important;
+  margin: 10px;
+  border-color: white;
+  background: none;
+  color: white;
+  border-width: 2px;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px !important;
+  margin: 5px;
+}
+
+/* Forward and Backward buttons*/
+.btn-side {
+  background: none;
+  border:none;
+  color: white;
+}
+
+/* Volume Button */
+.btn-vol {
+  background: none;
+  border:none;
+  color: white;
+  padding-right: 1px;
+}
+
+/* Volume Slide style*/
+.slider.slider-horizontal .slider-track {
+    height: 3px;
+    width: 100%;
+    margin-top: -1.5px;
+    top: 50%;
+    left: 0;
+}
+.slider-handle.round {
+    border-radius: 50% !important;
+}
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+    margin-left: -10px;
+    margin-top: -6px;
+}
+.slider-handle {
+    width: 15px;
+    height: 15px;
+}
+.slider-selection {
+    background-color: red !important;
+    background-image: none !important;
+}
+
+#song-slider {
+  width: 100%;
+}
+
+/**/
