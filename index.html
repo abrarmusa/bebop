@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Bebop</title>
-
+  <meta name='viewport' content='width=1190'>
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/audioplayer.css">
@@ -26,46 +26,53 @@
     var song = require("./js/audioLoader");
     song = new Song();
     song = song.getAudio();
+    var audioplayer;
     $( function() { $( 'audio' ).audioPlayer(); } );
     // With JQuery
   </script>
 
 </head>
 <body style="-webkit-app-region: drag">
-  <nav class="navbar navbar-inverse">
-    <div class="non-responsive">
+
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="row">
-        <div class="col-md-3 button-div">
-          <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-backward"></i></button>
-          <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-play"></i></button>
-          <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-forward"></i></button>
-          <button type="button" class="btn btn-default btn-vol"><i class="glyphicon glyphicon-volume-up"></i></button>
-          <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" class="vol-slider" />
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="footer">
+              <div class="row">
+        <div class="col-md-3 col-lg-3 big-button-div">
+          <div class="button-div music-controls">
+            <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-backward"></i></button>
+            <button type="button" class="btn btn-default btn-circle btn-lg playbutton"><i class="glyphicon glyphicon-play"></i></button>
+            <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-forward"></i></button>
+            <button type="button" class="btn btn-default btn-vol"><i class="glyphicon glyphicon-volume-up"></i></button>
+          </div>
+          <div class="button-div right-border">
+            <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" class="vol-slider" />
+          </div>
         </div>
-        <div class="col-md-4 music-div">
+        
+        <img src="./assets/gain.png" class="col-md-1 col-lg-1 img-responsive img-thumbnail">
+        
+        <div class="col-md-5 col-lg-5 music-div">
           <h4>Fxxk You</h4>
           <p>Gain - Hello World</p>
-          <input id="song-slider" data-slider-id='song-sliderSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" class="song-slider" />
+          <audio>
+            <source src="music/audio.mp3">
+            </audio>
+          </div>
         </div>
-      </div>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <audio controls>
-    <source src="music/audio.mp3">
-    </audio>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
 
 
 
     <!-- Bootstrap -->
 
     <!-- Bootflat's JS files.-->
-<script type="text/javascript">
-      $('#ex1').slider();
-      $('#song-slider').slider();
-</script>
+    <script type="text/javascript">
+      var slide= $('#ex1').slider();
+    </script>
   </body>
 
   <!-- Javascript -->

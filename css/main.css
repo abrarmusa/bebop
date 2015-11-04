@@ -6,52 +6,88 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Navbar Styles*/
+.right-border {
+  border-right: 1px white solid;
+  padding-right: 10px;
+}
 
-.navbar-inverse {
+.left-border {
+  border-left: 1px white solid;
+}
+.no-side-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/* Footer Styles*/
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background: -webkit-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%); 
     background:    -moz-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
     background:     -ms-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
     background:      -o-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
     background:         linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
     border: none;
+    height: 94px;
 }
 
 /* Div to hold music controls */
+.big-button-div {
+  display: table;
+  height: 94px;
+  padding-left: 25px;
+  padding-right: 0px;
+  position: relative;
+  overflow: hidden;
+}
 .button-div {
-  margin: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.music-controls {
+  width: 184px;
 }
 /* Div to hold music details*/
 .music-div {
-    padding-left: 25px;
+    padding-left: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    padding-right: 25px;
-    border-left: 1px white solid;
+    padding-right: 0px;
     border-right: 1px white solid;
 }
 
 .music-div > h4, p {
   color:white;
+  text-align: center;
+}
+.music-div > h4 {
+  margin-bottom: 4px;
+}
+.music-div > p {
+  margin-bottom: 0px;
 }
 
 
-
-
-
 /* Circular button hover */
-.btn-default.btn-circle.active, .btn-default.btn-circle:active, .btn-default.btn-circle:focus, .btn-default.btn-circle:hover {
+.btn-default.btn-circle:hover {
     background: none !important;
     border-color: red !important;
     color: white !important;
     transition: border-color 0.7s ease; 
 }
 
-/* Button hover styles*/
-.btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover {
+.btn-default:hover {
     background: none !important;
     color: red !important;
     transition: color 0.7s ease; 
+}
+
+.btn-default.active, .btn-default:active, .btn-default.btn-circle.active, .btn-default.btn-circle:active, .btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover {
+  background: none !important;
 }
 
 /* Circular Play button*/
@@ -99,7 +135,7 @@
 .slider.slider-horizontal .slider-track {
     height: 3px;
     width: 100%;
-    margin-top: -1.5px;
+    margin-top: -3px;
     top: 50%;
     left: 0;
 }
@@ -109,6 +145,10 @@
 .slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
     margin-left: -10px;
     margin-top: -6px;
+}
+.slider.slider-horizontal {
+    width: 100%;
+    height: 20px;
 }
 .slider-handle {
     width: 15px;
@@ -123,4 +163,41 @@
   width: 100%;
 }
 
-/**/
+/* Albumart */
+.img-thumbnail {
+    display: inline-block;
+    width: 88px;
+    min-width: 88px;
+    height: 88px;
+    padding: 0px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 3px;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.center-cropped {
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Set the image to fill its parent and make transparent */
+.center-cropped img {
+  min-height: 100%;
+  min-width: 100%;
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 5-7 */
+  filter: alpha(opacity=0);
+  /* modern browsers */
+  opacity: 0;
+}
+
+.albumart-div {
+  height: 100%
+}
+

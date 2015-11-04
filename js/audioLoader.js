@@ -8,7 +8,7 @@ class Song {
 
   constructor() {
     console.log('Constructing');
-    this.url = 'https://www.youtube.com/watch?v=iX-QaNzd-0Y';
+    this.url = 'https://www.youtube.com/watch?v=VSAVsstaj4E';
     this.ffmpegpath = "";
   }
  
