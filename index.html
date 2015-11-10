@@ -34,42 +34,73 @@
 </head>
 <body style="-webkit-app-region: drag">
 
-      <!-- Brand and toggle get grouped for better mobile display -->
+  <!-- NAVIGATION BAR -->
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="footer">
+    <div class="row">
+      <div class="col-md-3 col-lg-3 big-button-div">
+        <div class="button-div music-controls">
+          <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-backward"></i></button>
+          <button type="button" class="btn btn-default btn-circle btn-lg playbutton"><i class="glyphicon glyphicon-play"></i></button>
+          <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-forward"></i></button>
+          <button type="button" class="btn btn-default btn-vol"><i class="glyphicon glyphicon-volume-up"></i></button>
+        </div>
+        <div class="button-div">
+          <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="10" class="vol-slider" />
+        </div>
+      </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="footer">
-              <div class="row">
-        <div class="col-md-3 col-lg-3 big-button-div">
-          <div class="button-div music-controls">
-            <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-backward"></i></button>
-            <button type="button" class="btn btn-default btn-circle btn-lg playbutton"><i class="glyphicon glyphicon-play"></i></button>
-            <button type="button" class="btn btn-default btn-side"><i class="glyphicon glyphicon-forward"></i></button>
-            <button type="button" class="btn btn-default btn-vol"><i class="glyphicon glyphicon-volume-up"></i></button>
-          </div>
-          <div class="button-div right-border">
-            <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" class="vol-slider" />
-          </div>
-        </div>
-        
-        <img src="./assets/gain.png" class="col-md-1 col-lg-1 img-responsive img-thumbnail">
-        
-        <div class="col-md-5 col-lg-5 music-div">
-          <h4>Fxxk You</h4>
-          <p>Gain - Hello World</p>
-          <audio>
-            <source src="music/audio.mp3">
-            </audio>
-          </div>
-        </div>
+      
+
+      <div class="col-md-6 col-lg-6 music-div">
+        <h4>Fxxk You</h4>
+        <p>Gain - Hello World</p>
+        <audio>
+          <source src="music/audio.mp3">
+          </audio>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="col-md-3 col-lg-3 form-group">
+          <input type="email" class="form-control search-child-div" id="exampleInputEmail2" placeholder="jane.doe@example.com">  
+        </div>
+      </div>
+    </div>
+    <!-- END OF NAVIGATION BAR -->
 
+    <!-- BODY -->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="mainbody">
+      <!-- LEFT SIDEBAR -->
+      <div class="col-xs-2 col-md-2 col-lg-2 leftbar">
+        <div class="inner-leftbar">
+        <h4><strong>LIBRARY</strong></h4>
+        <ul>
+          <li><i class="glyphicon glyphicon-music"></i><a href="#">Songs</a></li>
+          <li><i class="glyphicon glyphicon-user"></i><a href="#">Artists</a></li>
+          <li><i class="glyphicon glyphicon-cd"></i><a href="#">Albums</a></li>
+        </ul>
+        </div>
+        <div class="inner-leftbar">
+        <h4>PLAYLISTS</h4>
+        <ul>
+          <li><i class="glyphicon glyphicon-music"></i><a href="#">Dapibus ac facilisis in</a></li>
+          <li><i class="glyphicon glyphicon-music"></i><a href="#">Morbi leo risus</a></li>
+          <li><i class="glyphicon glyphicon-music"></i><a href="#">Porta ac consectetur ac</a></li>
+          <li><i class="glyphicon glyphicon-music"></i><a href="#">Vestibulum at eros</a></li>
+        </ul>
+        </div>
+        <div class=" img-thumbnail">
+        <h4 class="nowplaying"><strong>NOW PLAYING</strong></h4>
+        <img src="./assets/gain.png" class="img-responsive">
+        </div>
+      </div>
+      <!-- LEFT SIDEBAR END -->
+      <!-- RIGHT SIDEBAR -->
+      <div class="col-xs-2 col-md-2 col-lg-2">
 
+      </div>
+      <!-- RIGHT SIDEBAR END -->
 
-
-    <!-- Bootstrap -->
-
-    <!-- Bootflat's JS files.-->
+    </div>
+    <!-- END OF BODY -->
     <script type="text/javascript">
       var slide= $('#ex1').slider();
     </script>

@@ -5,6 +5,37 @@
           border-radius: 0 !important;
   font-family: 'Roboto', sans-serif;
 }
+ul {
+  padding-left: 0px;
+    list-style-type: none;
+}
+
+h4 {
+  color: white;
+}
+li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li > a {
+  margin-left: 10px;
+}
+
+a:hover { 
+    color: red;
+    transition: color 0.7s ease; 
+}
+
+.form-control {
+  width: 84%;
+}
+
+#mainbody {
+  margin-top: 94px;
+  position:absolute; top:0; bottom:0; right:0; left:0;
+  background-color: #131D56;
+}
 
 .right-border {
   border-right: 1px white solid;
@@ -22,25 +53,30 @@
 
 #footer {
     position: fixed;
-    bottom: 0;
+    top: 0;
     width: 100%;
     background: -webkit-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%); 
     background:    -moz-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
     background:     -ms-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
     background:      -o-linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
     background:         linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
-    border: none;
     height: 94px;
 }
 
 /* Div to hold music controls */
 .big-button-div {
-  display: table;
-  height: 94px;
-  padding-left: 25px;
-  padding-right: 0px;
-  position: relative;
-  overflow: hidden;
+    display: table;
+    height: 94px;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-child-div {
+    padding-left: 22px;
+    margin-left: 25px;
+    margin-top: 30px;
 }
 .button-div {
   display: table-cell;
@@ -57,7 +93,7 @@
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
-    border-right: 1px white solid;
+    /*border-right: 1px white solid;*/
 }
 
 .music-div > h4, p {
@@ -165,15 +201,14 @@
 
 /* Albumart */
 .img-thumbnail {
+    position: absolute;
+    bottom: 0;
     display: inline-block;
-    width: 88px;
-    min-width: 88px;
-    height: 88px;
-    padding: 0px;
+    width: 100%;
+    padding: 0px !important;
     line-height: 1.42857143;
     background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 3px;
+    border: none !important;
     border-radius: 4px;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -199,5 +234,25 @@
 
 .albumart-div {
   height: 100%
+}
+
+.leftbar {
+  position:absolute; top:0; bottom:0; right:0; left:0;
+  background-color:  #0A0F2F;
+  padding: 0px !important;
+}
+
+.inner-leftbar {
+  padding: 15px;
+}
+
+.nowplaying {
+    text-align: center;
+    background-color: #26D0CE;
+    border: none !important;
+    margin-top: 0px;
+    margin-bottom: 0px !important;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
