@@ -1,7 +1,7 @@
 "use strict";
 
 let fs = require('fs');
-let ytdl =require('ytdl-core');
+let ytdl = require('ytdl-core');
 let ffmpeg = require('fluent-ffmpeg');
 let ffmpegPath = require('ffmpeg-bin').ffmpeg
 
