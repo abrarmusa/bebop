@@ -256,3 +256,13 @@ a:hover {
     padding-top: 10px;
 }
 
+.paddingtop20 {
+  padding-top: 25px !important;
+}
+
+.searchwidth {
+  width: 100%;
+}
+#appbody {
+  float: right;
+}

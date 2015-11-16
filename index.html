@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/audioplayer.css">
   <script type="text/javascript">
     window.$ = window.jQuery = require('jquery');
+    var song = require("./js/audioLoader");
   </script>
   <!-- Requiring Bootstrap -->
   <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
@@ -16,20 +17,18 @@
   <link rel="stylesheet" href="./node_modules/bootstrap-slider/css/bootstrap-slider.css">
   <link rel="stylesheet" href="css/non-responsive.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/360player.css">
   <script src="js/audioLoader.js" charset="utf-8"></script>
+  <script src="js/animator.js" charset="utf-8"></script>
+  <script src="js/threesixtyplayer.js" charset="utf-8"></script>
+  <script src="js/audioManager.js" charset="utf-8"></script>
+  <script src="js/searchFunction.js" charset="utf-8"></script>
   <script src="js/audioplayer.min.js" charset="utf-8"></script>
   <script src="./node_modules/bootflat/bootflat/js/icheck.min.js"></script>
+  <script src="./node_modules/soundmanager2/script/soundmanager2.js"></script>
   <script src="./node_modules/bootflat/bootflat/js/jquery.fs.selecter.min.js"></script>
   <script src="./node_modules/bootflat/bootflat/js/jquery.fs.stepper.min.js"></script>
   <script src="./node_modules/bootstrap-slider/js/bootstrap-slider.js"></script>
-  <script>
-    var song = require("./js/audioLoader");
-    song = new Song();
-    song = song.getAudio();
-    var audioplayer;
-    $( function() { $( 'audio' ).audioPlayer(); } );
-    // With JQuery
-  </script>
 
 </head>
 <body style="-webkit-app-region: drag">
@@ -52,15 +51,20 @@
       
 
       <div class="col-md-6 col-lg-6 music-div">
-        <h4>Fxxk You</h4>
-        <p>Gain - Hello World</p>
+        <h4 id="songname">Fxxk You</h4>
+        <p id="artistname">Gain - Hello World</p>
         <audio>
           <source src="music/audio.mp3">
           </audio>
         </div>
 
-        <div class="col-md-3 col-lg-3 form-group">
-          <input type="email" class="form-control search-child-div" id="exampleInputEmail2" placeholder="jane.doe@example.com">  
+        <div class="col-md-3 col-lg-3 paddingtop20">
+          <form class="navbar-form button-div 20paddingtop" role="search">
+            <div class="form-group">
+            <input type="text" id="searchfield" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default" onclick="search_song(); return false;">Submit</button>
+          </form>
         </div>
       </div>
     </div>
@@ -71,31 +75,33 @@
       <!-- LEFT SIDEBAR -->
       <div class="col-xs-2 col-md-2 col-lg-2 leftbar">
         <div class="inner-leftbar">
-        <h4><strong>LIBRARY</strong></h4>
-        <ul>
-          <li><i class="glyphicon glyphicon-music"></i><a href="#">Songs</a></li>
-          <li><i class="glyphicon glyphicon-user"></i><a href="#">Artists</a></li>
-          <li><i class="glyphicon glyphicon-cd"></i><a href="#">Albums</a></li>
-        </ul>
+          <h4><strong>LIBRARY</strong></h4>
+          <ul>
+            <li><i class="glyphicon glyphicon-music"></i><a href="#">Songs</a></li>
+            <li><i class="glyphicon glyphicon-user"></i><a href="#">Artists</a></li>
+            <li><i class="glyphicon glyphicon-cd"></i><a href="#">Albums</a></li>
+          </ul>
         </div>
         <div class="inner-leftbar">
-        <h4>PLAYLISTS</h4>
-        <ul>
-          <li><i class="glyphicon glyphicon-music"></i><a href="#">Dapibus ac facilisis in</a></li>
-          <li><i class="glyphicon glyphicon-music"></i><a href="#">Morbi leo risus</a></li>
-          <li><i class="glyphicon glyphicon-music"></i><a href="#">Porta ac consectetur ac</a></li>
-          <li><i class="glyphicon glyphicon-music"></i><a href="#">Vestibulum at eros</a></li>
-        </ul>
+          <h4>PLAYLISTS</h4>
+          <ul>
+            <li><i class="glyphicon glyphicon-music"></i><a href="#">Dapibus ac facilisis in</a></li>
+            <li><i class="glyphicon glyphicon-music"></i><a href="#">Morbi leo risus</a></li>
+            <li><i class="glyphicon glyphicon-music"></i><a href="#">Porta ac consectetur ac</a></li>
+            <li><i class="glyphicon glyphicon-music"></i><a href="#">Vestibulum at eros</a></li>
+          </ul>
         </div>
         <div class=" img-thumbnail">
-        <h4 class="nowplaying"><strong>NOW PLAYING</strong></h4>
-        <img src="./assets/gain.png" class="img-responsive">
+          <h4 class="nowplaying"><strong>NOW PLAYING</strong></h4>
+          <img src="./assets/gain.png" class="img-responsive">
         </div>
       </div>
       <!-- LEFT SIDEBAR END -->
       <!-- RIGHT SIDEBAR -->
-      <div class="col-xs-2 col-md-2 col-lg-2">
-
+      <div class="col-xs-10 col-md-10 col-lg-10" id="appbody">
+<div class="ui360">
+ <a href="music/audio.mp3">play "an.mp3"</a>
+</div>
       </div>
       <!-- RIGHT SIDEBAR END -->
 

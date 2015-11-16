@@ -4,6 +4,7 @@ let fs = require('fs');
 let ytdl = require('ytdl-core');
 let ffmpeg = require('fluent-ffmpeg');
 let ffmpegPath = require('ffmpeg-bin').ffmpeg
+require('soundmanager2');
 
 class Song {
 
@@ -25,8 +26,8 @@ class Song {
 
   }
 
-  getAudio(){
-    var stream = ytdl(this.url);
+  getAudio(url){
+    var stream = ytdl(url);
     var mp3 = 'music/audio.mp3';
     this.setffmpegPath();
     console.log("Path for ffmpeg is "+ ffmpegPath);

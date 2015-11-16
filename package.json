@@ -136,6 +136,7 @@
     "semver": "5.0.3",
     "single-line-log": "0.4.1",
     "sntp": "1.0.9",
+    "soundmanager2": "^2.97.20150601",
     "source-map": "0.1.31",
     "spdx-correct": "1.0.2",
     "spdx-exceptions": "1.0.3",
@@ -164,6 +165,7 @@
     "wrappy": "1.0.1",
     "xtend": "2.1.2",
     "yauzl": "2.3.1",
+    "youtube-search": "^1.0.4",
     "ytdl-core": "^0.7.5"
   },
   "dependencies": {
